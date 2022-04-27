@@ -1,203 +1,130 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>首页</title>
-		<script src="js/mui.min.js"></script>
-		<link href="css/mui.min.css" rel="stylesheet" />
-		<style>
-			html,
-			body {
-				background-color: #efeff4;
-			}
-			
-			.title {
-				margin: 20px 15px 10px;
-				color: #6d6d72;
-				font-size: 15px;
-				padding-bottom: 51px;
-			}
-		</style>
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Chien_W Home">
+    <meta name="keywords" content="Chien_W,Homepage">
+    <meta name="author" content="Chien_W">
+    <title>Lucky Home</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/vno.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/iconfont.css">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico">
+</head>
 
-	<body>
-		<div class="mui-content">
-			<div class="title">
-				<p>这是使用nativeObj 原生控件绘制的底部选项卡示例，当前为父页面，显示第一个tab项内容；</p>
-				<p>这里采用将第一个tab项内容放在父页面显示，因为是入口页面，会在启动中进行渲染，使首页显示速度更快</p>
-				<p>选项卡常用于App首页，为加快渲染，原生底部选项卡是在manifest.json中通过plus -> launchwebview -> subNViews 节点配置的；</p>
-				<p>选项卡图标使用字体绘制，点击可切换对应选项卡的高亮状态，开发者可自定义相应的点击事件；</p>
-				<p>本示例中，点击第二个选项卡打开一个支持下拉刷新的webview；点击第四个选项卡，打开一个新窗口。</p>
+<body>
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
+    </span>
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">            
+                        <a href="#" title="" class="blog-button">
+                            <div class="img"><img src="./img/me.jpg" alt="img" class="js-avatar iUp profilepic"></div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2> 
+                                        
+                                            Lucky
+                                        
+                                    </h2>
+                                    <p>
+                                        
+                                            2020 · 幸运
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-				<p>中间悬浮大球图标，因涉及屏幕分辨率动态计算，目前是在首页plusReady事件中实现绘制的。该悬浮大球支持点击事件，开发者可定制实现对应的点击逻辑。</P>
-				<p>为提高性能，本示例选项卡图标全部使用字体文件绘制（推荐），实际使用中也可以使用图片绘制。</p>
-			</div>
-		</div>
+                    <!-- <a href="#" title="Dmego Home" class="profilepic">
+                        <img src="./img/logo2.jpg" width="80" alt="Dmego`s logo" class="js-avatar iUp show" />
+                    </a> -->
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <a href="https://www.oyyandwjw.xyz" target="_blank" >Chine_W</a>
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">Fortune Accompanies Life</p>
+                    <hr class="panel-cover__divider iUp" />
+                    <p id="description" class="panel-cover__description iUp">如何得与凉风约，不共尘沙一并来!
+                        <br/>
+                        <strong>-「中牟道中」</strong>
+                    </p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="./Personal profile/index.html" class="blog-button" >自序</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="./Hobby/index.html" class="blog-button">爱好</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="./Grade/index.html" class="blog-button">成绩</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="./Collect/index.html" class="blog-button">收藏</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="https://github.com/Chien-W" title="github" target="_blank">
+                                            <i class='social iconfont icon-github'></i>
+                                            <span class="label">github</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://www.cnblogs.com/764012358w/" title="cnblogs" target="_blank">
+                                            <i class='social iconfont icon-cnblogs'></i>
+                                            <span class="label">cnblogs</span>
+                                        </a>
+                                    </li>
 
-		<script src="js/util.js"></script>
-		<script type="text/javascript">
-			(function() {
-				mui.init({
-					swipeBack: true //启用右滑关闭功能
-				});
-				mui.plusReady(function() {
-					var self = plus.webview.currentWebview(),
-						leftPos = Math.ceil((window.innerWidth - 60) / 2); // 设置凸起大图标为水平居中
-
-					/**	
-					 * drawNativeIcon 绘制带边框的半圆，
-					 * 实现原理：
-					 *   id为bg的tag 创建带边框的圆
-					 *   id为bg2的tag 创建白色矩形遮住圆下半部分，只显示凸起带边框部分
-					 * 	 id为iconBg的红色背景图
-					 *   id为icon的字体图标
-					 *   注意创建先后顺序，创建越晚的层级越高
-					 */
-					var drawNativeIcon = util.drawNative('icon', {
-						bottom: '5px',
-						left: leftPos + 'px',
-						width: '60px',
-						height: '60px'
-					}, [{
-						tag: 'rect',
-						id: 'bg',
-						position: {
-							top: '1px',
-							left: '0px',
-							width: '100%',
-							height: '100%'
-						},
-						rectStyles: {
-							color: '#fff',
-							radius: '50%',
-							borderColor: '#ccc',
-							borderWidth: '1px'
-						}
-					}, {
-						tag: 'rect',
-						id: 'bg2',
-						position: {
-							bottom: '-0.5px',
-							left: '0px',
-							width: '100%',
-							height: '45px'
-						},
-						rectStyles: {
-							color: '#fff'
-						}
-					}, {
-						tag: 'rect',
-						id: 'iconBg',
-						position: {
-							top: '5px',
-							left: '5px',
-							width: '50px',
-							height: '50px'
-						},
-						rectStyles: {
-							color: '#d74b28',
-							radius: '50%'
-						}
-					}, {
-						tag: 'font',
-						id: 'icon',
-						text: '\ue600', //此为字体图标Unicode码'\e600'转换为'\ue600'
-						position: {
-							top: '0px',
-							left: '5px',
-							width: '50px',
-							height: '100%'
-						},
-						textStyles: {
-							fontSrc: '_www/fonts/iconfont.ttf',
-							align: 'center',
-							color: '#fff',
-							size: '30px'
-						}
-					}]);
-					// append 到父webview中
-					self.append(drawNativeIcon);
-
-					//自定义监听图标点击事件
-					var active_color = '#fff';
-					drawNativeIcon.addEventListener('click', function(e) {
-						mui.alert('你点击了图标，你在此可以打开摄像头或者新窗口等自定义点击事件。', '悬浮球点击事件');
-						// 重绘字体颜色
-						if(active_color == '#fff') {
-							drawNativeIcon.drawText('\ue600', {}, {
-								fontSrc: '_www/fonts/iconfont.ttf',
-								align: 'center',
-								color: '#000',
-								size: '30px'
-							}, 'icon');
-							active_color = '#000';
-						} else {
-							drawNativeIcon.drawText('\ue600', {}, {
-								fontSrc: '_www/fonts/iconfont.ttf',
-								align: 'center',
-								color: '#fff',
-								size: '30px'
-							}, 'icon');
-							active_color = '#fff';
-						}
-
-					});
-					// 中间凸起图标绘制及监听点击完毕
-
-					// 创建子webview窗口 并初始化
-					var aniShow = {};
-					util.initSubpage(aniShow);
-					
-					var 	nview = plus.nativeObj.View.getViewById('tabBar'),
-						activePage = plus.webview.currentWebview(),
-						targetPage,
-						subpages = util.options.subpages,
-						pageW = window.innerWidth,
-						currIndex = 0;
-					
-						
-					/**
-					 * 根据判断view控件点击位置判断切换的tab
-					 */
-					nview.addEventListener('click', function(e) {
-						var clientX = e.clientX;
-						if(clientX > 0 && clientX <= parseInt(pageW * 0.25)) {
-							currIndex = 0;
-						} else if(clientX > parseInt(pageW * 0.25) && clientX <= parseInt(pageW * 0.45)) {
-							currIndex = 1;
-						} else if(clientX > parseInt(pageW * 0.45) && clientX <= parseInt(pageW * 0.8)) {
-							currIndex = 2;
-						} else {
-							currIndex = 3;
-						}
-						// 匹配对应tab窗口	
-						if(currIndex > 0) {
-							targetPage = plus.webview.getWebviewById(subpages[currIndex - 1]);
-						} else {
-							targetPage = plus.webview.currentWebview();
-						}
-
-						if(targetPage == activePage) {
-							return;
-						}
-
-						if(currIndex !== 3) { 
-							//底部选项卡切换
-							util.toggleNview(currIndex);
-							// 子页面切换
-							util.changeSubpage(targetPage, activePage, aniShow);
-							//更新当前活跃的页面
-							activePage = targetPage;
-						} else {
-							//第四个tab 打开新窗口
-							plus.webview.open('html/new-webview.html', 'new', {}, 'slide-in-right', 200);
-						}
-					});
-				});
-			})();
-		</script>
-	</body>
-
+                                    <li class="navigation__item">
+                                        <a href="#" title="zhihu">
+                                            <i class='social iconfont icon-zhihu'></i>
+                                            <span class="label">zhihu</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="mailto:764012358@qq.com" title="email">
+                                            <i class='social iconfont icon-email'></i>
+                                            <span class="label">email</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        <!-- <div class="beian iUp">
+            <a class="icp" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">XXX</a>
+            <a class="gwab" href="http://www.beian.gov.cn/portal/recordQuery" target="_blank">XXX</a>
+        </div> -->
+        <div class="remark iUp">
+            <p class="power">© 2020 Powered By
+                <a href="https://www.oyyandwjw.cn/" target="_blank"> Chien_W </a>
+            </p>
+        </div>
+    </header>
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/fetch.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+   <!-- 网易云音乐 -->
+    <embed frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=280 src="//music.163.com/outchain/player?type=0&id=4950890732&auto=1&height=430"></embed>
+</body>
 </html>
